@@ -14,6 +14,7 @@ _Taller 2 - Modelo de Información y Diagrama de Contexto_
 El objetivo del taller fue analizar la estructura de información utilizada por la empresa en el proceso de **atención de pacientes para empresas**, y representarla mediante un modelo de datos que permitiera identificar claramente las entidades, sus atributos y las relaciones existentes entre ellas. A través de este proceso se buscó comprender cómo se organiza la información dentro del sistema y cómo puede modelarse utilizando diagramas Entidad-Relación.
 
 ## 🔧 Proceso de desarrollo
+
 Para la realización del trabajo se inició con el análisis de la estructura de datos utilizada por la empresa, con el propósito de identificar la información principal y comprender cómo se relacionaban los distintos elementos del sistema. A partir de este análisis se definieron las entidades, atributos y relaciones necesarias para representar el funcionamiento del proceso.
 
 En una primera fase se utilizó la herramienta Mermaid, donde se elaboró un diagrama entidad-relación orientado a tablas, permitiendo organizar inicialmente las entidades junto con sus atributos, claves primarias y claves foráneas. Este paso facilitó la validación de la estructura lógica de la base de datos y la identificación de las relaciones y cardinalidades entre las tablas.
@@ -66,14 +67,16 @@ En consecuencia, algunas decisiones de diseño se basaron en la interpretación 
 
 ## 🔍 Investigación complementaria
 ### Tema investigado:
-(Ej: Buenas prácticas BPMN, comparación TOGAF vs C4, principios de seguridad STRIDE, etc.)
+Relación de FHIR con los modelos entidad-relación
 
 ### Resumen:
-Describa en 2–3 párrafos lo investigado, citando fuentes cuando sea necesario. Incluya cómo se relaciona con el taller.
+El estándar FHIR (Fast Healthcare Interoperability Resources) de HL7 define una estructura formal para modelar información clínica y administrativa en sistemas de salud. FHIR propone “recursos” estandarizados como Organization, Patient, Practitioner, ServiceRequest, Observation y DiagnosticReport, que representan organizaciones, pacientes, profesionales, solicitudes de servicios, resultados individuales e informes diagnósticos agrupados. Este estándar no solo define entidades, sino también sus relaciones y reglas de interoperabilidad (HL7, 2019).
+
+La relación con el caso desarrollado es directa: la entidad Empresa se alinea con Organization; Paciente con Patient; Profesional con Practitioner; Servicios_detallado se asemeja a Observation (resultado individual con responsable); y Concepto_Medico cumple un rol similar a DiagnosticReport, que agrupa múltiples resultados bajo un mismo informe. Además, FHIR respalda la buena práctica de separar orden del servicio (ServiceRequest), resultado atómico (Observation) e informe final (DiagnosticReport), lo que fortalece conceptualmente el modelo ER propuesto y justifica su estructura desde un estándar internacional.
 
 ## 📚 Referencias
-- [1] Apellido, Nombre. *Título*. Año. URL o DOI.
-- [2] Fuente oficial BPMN: https://www.omg.org/spec/BPMN/
+- [1] Health Level Seven International (HL7). (2019). FHIR Release 4 (R4) Specification. https://hl7.org/fhir/R4/
+- [2] Fuente asistida por IA: ChatGPT, febrero 2026.
 
 ---
 
